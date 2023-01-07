@@ -34,7 +34,8 @@
         </div><!-- ./col-md-12-->
 
     </div><!-- ./row-->
-
+@section('content')
+    @if(count($users))
     <div class="row mt-3 mb-3">
         <div class="col-md-12">
 
@@ -49,66 +50,14 @@
                     </tr>
                     </thead>
                     <tbody>
+                    @foreach($users as $user)
                     <tr>
-                        <th scope="row">1</th>
-                        <td>John Doe</td>
-                        <td>john@mail.com</td>
-                        <td>555 555-55-55</td>
+                        <th scope="row">{{ $user->id }}</th>
+                        <td>{{$user->name}}</td>
+                        <td>{{$user->email}}</td>
+                        <td>{{$user->phone}}</td>
                     </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>John Doe</td>
-                        <td>john@mail.com</td>
-                        <td>555 555-55-55</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td>John Doe</td>
-                        <td>john@mail.com</td>
-                        <td>555 555-55-55</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">4</th>
-                        <td>John Doe</td>
-                        <td>john@mail.com</td>
-                        <td>555 555-55-55</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">5</th>
-                        <td>John Doe</td>
-                        <td>john@mail.com</td>
-                        <td>555 555-55-55</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">6</th>
-                        <td>John Doe</td>
-                        <td>john@mail.com</td>
-                        <td>555 555-55-55</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">7</th>
-                        <td>John Doe</td>
-                        <td>john@mail.com</td>
-                        <td>555 555-55-55</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">8</th>
-                        <td>John Doe</td>
-                        <td>john@mail.com</td>
-                        <td>555 555-55-55</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">9</th>
-                        <td>John Doe</td>
-                        <td>john@mail.com</td>
-                        <td>555 555-55-55</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">10</th>
-                        <td>John Doe</td>
-                        <td>john@mail.com</td>
-                        <td>555 555-55-55</td>
-                    </tr>
+                    @endforeach
                     </tbody>
                 </table>
 
@@ -119,7 +68,8 @@
     </div><!-- ./row-->
 
 </div><!-- ./container-->
-
+@endif
+@endsection
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
