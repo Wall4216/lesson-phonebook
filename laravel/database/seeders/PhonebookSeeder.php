@@ -15,7 +15,7 @@ class PhonebookSeeder extends Seeder
      */
     public function run()
     {
-        Phonebook::factory(10)->create();
+        Phonebook::factory(100)->create();
 
     }
 }
