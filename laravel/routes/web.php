@@ -15,4 +15,4 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [\App\Http\Controllers\IndexController::class, 'Index' ])->name('home');
 Route::get('/', [\App\Http\Controllers\MainController::class, 'Index'])->name('home');
-
+Route::get('/search', [\App\Http\Controllers\SearchController::class, 'Index'])->name('search');
